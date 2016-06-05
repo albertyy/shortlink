@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TransLink">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TransLink Webpage</title>
+
+    <link href="" rel="shortcut icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AngularJS library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.controller.client.js"></script>
+
+</head>
+<body  ng-controller="AppController">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="container-fluid">
+
+    <!-- title -->
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+            <h2 class="text-center">Link Transfer</h2>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <!-- input form -->
+    <div class="row">
+        <form class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6" name="form" >
+
+            <div class="form-group">
+                <label>Input Address</label>
+                <input ng-model="oldAddr" type="url" class="form-control" placeholder="input valid url" required>
+            </div>
+
+            <div class="form-group">
+                <label>New Address</label><br/>
+                <a href="{{newAddr}}">{{newAddr}} &nbsp;</a>
+            </div>
+
+            <div class="form-group">
+                <button ng-click="transfer(oldAddr)" type="submit" class="form-control btn btn-primary">Transfer</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
